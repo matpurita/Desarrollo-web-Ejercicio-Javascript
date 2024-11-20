@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Javacript - Parte 1</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Ejercicio Javacript</h1>
+        <h2>Enlaces a otros items</h2>
+        <ul>
+            <li>Ejercicio - Parte 1</li>
+            <li><a href="parte2.html">Ejercicio - Parte 2</a></li>
+            <li><a href="parte3.html">Ejercicio - Parte 3</a></li>
+        </ul>
+        <h3>Ejercicio Parte 1 - Mensaje de bienvenida</h3>
+        <p id="mensaje"></p>
+        <button id="refrescar">refrescar mesaje</button>
+    </div>
+
+    <script>
+        const datosPersonasAleatorias = [
+            {
+                nombre: "Juan",
+                edad: 25,
+                ciudad: "Buenos Aires"
+            },
+            {
+                nombre: "Ana",
+                edad: 30,
+                ciudad: "Barcelona"
+            },
+            {
+                nombre: "Pedro",
+                edad: 35,
+                ciudad: "Tucuman"
+            },
+            {
+                nombre: "Luis",
+                edad: 40,
+                ciudad: "Madrid"
+            },
+            {
+                nombre: "Maria",
+                edad: 45,
+                ciudad: "Hurlingam"
+            }
+        ];
+
+
+
+
+        document.getElementById("refrescar").addEventListener("click", function() {
+            location.reload();
+        });
+
+
+        let personaAleatoria = datosPersonasAleatorias[Math.floor(Math.random() * datosPersonasAleatorias.length)];
+        let mensaje = `Bienvenid@ ${personaAleatoria.nombre}, de ${personaAleatoria.edad} años y de ${personaAleatoria.ciudad}, esperamos que disfrutes de tu estancia en nuestra web.`;
+        document.getElementById("mensaje").innerHTML = mensaje;
+    </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+/* styles.css */
+
+/* Estilo para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Estilo para los encabezados */
+h1 {
+    color: #444;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #555;
+    margin-left: 20px;
+}
+
+h3 {
+    color: #666;
+    margin-left: 20px;
+}
+
+/* Estilo para los párrafos */
+p {
+    margin: 20px;
+    font-size: 18px;
+}
+
+/* Estilo para la lista de enlaces */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para un enlace activo */
+ul li a:active {
+    color: #0056b3;
+}

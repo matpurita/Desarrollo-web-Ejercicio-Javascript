@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Javascript - parte 2</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <body>
+        <div class="container">
+            <h1>Ejercicio Javacript</h1>
+            <h2>Enlaces a otros items</h2>
+            <ul>
+                <li><a href="index.html">Ejercicio - Parte 1</a></li>
+                <li>Ejercicio - Parte 2</li>
+                <li><a href="parte3.html">Ejercicio - Parte 3</a></li>
+            </ul>
+            <h3>Ejercicio Parte 2 - ingresar datos personales</h3>
+            <form id="formulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+                <br>
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad">
+                <br>
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" id="ciudad" name="ciudad">
+                <br>
+                <button type="submit">Aceptar</button>
+            </form>
+            <h3>Mensaje Bienvenida</h3>
+            
+            <p id="mensaje"></p>
+        </div>
+
+        <script>
+            const formulario = document.getElementById("formulario");
+            const mensaje = document.getElementById("mensaje");
+
+            formulario.addEventListener("submit", function(event) {
+                event.preventDefault();
+                const datos = new FormData(formulario);
+                const nombre = datos.get("nombre");
+                const edad = datos.get("edad");
+                const ciudad = datos.get("ciudad");
+
+                if(nombre === "" || edad === "" || ciudad === "") {
+                    alert("Por favor, complete todos los campos");
+                    return;
+                }
+                alert(`Bienvenido ${nombre}, de ${edad} años de edad, de la ciudad de ${ciudad}, espero que disfrutes de tu estadia en la web.`);
+                mensaje.innerHTML = `Bienvenido ${nombre}, de ${edad} años de edad, de la ciudad de ${ciudad}, espero que disfrutes de tu estadia en la web.`;
+            });
+
+        </script>
+
+    </body>
+
+</html>
