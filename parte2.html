@@ -32,7 +32,7 @@
                 <br>
                 <button type="submit">Aceptar</button>
             </form>
-            <h3>Mensaje Bienvenida</h3>
+            <h3 id="titulo-mensaje"></h3>
             
             <p id="mensaje"></p>
         </div>
@@ -53,6 +53,8 @@
                     return;
                 }
                 alert(`Bienvenido ${nombre}, de ${edad} años de edad, de la ciudad de ${ciudad}, espero que disfrutes de tu estadia en la web.`);
+                
+                document.getElementById("titulo-mensaje").innerHTML = "Mensaje de bienvenida";
                 mensaje.innerHTML = `Bienvenido ${nombre}, de ${edad} años de edad, de la ciudad de ${ciudad}, espero que disfrutes de tu estadia en la web.`;
             });
 

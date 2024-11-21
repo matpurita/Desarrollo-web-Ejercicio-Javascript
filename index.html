@@ -10,14 +10,14 @@
 
 <body>
     <div class="container">
-        <h1>Ejercicio Javacript</h1>
+        <h1>Ejercicio JavaScript</h1>
         <h2>Enlaces a otros items</h2>
         <ul>
             <li>Ejercicio - Parte 1</li>
             <li><a href="parte2.html">Ejercicio - Parte 2</a></li>
             <li><a href="parte3.html">Ejercicio - Parte 3</a></li>
         </ul>
-        <h3>Ejercicio Parte 1 - Mensaje de bienvenida</h3>
+        <h3 id="titulo-mensaje"></h3>
         <p id="mensaje"></p>
         <button id="refrescar">refrescar mesaje</button>
     </div>
@@ -58,7 +58,7 @@
             location.reload();
         });
 
-
+        document.getElementById("titulo-mensaje").innerHTML = "Mensaje de bienvenida";
         let personaAleatoria = datosPersonasAleatorias[Math.floor(Math.random() * datosPersonasAleatorias.length)];
         let mensaje = `Bienvenid@ ${personaAleatoria.nombre}, de ${personaAleatoria.edad} años y de ${personaAleatoria.ciudad}, esperamos que disfrutes de tu estancia en nuestra web.`;
         document.getElementById("mensaje").innerHTML = mensaje;

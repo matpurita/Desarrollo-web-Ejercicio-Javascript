@@ -28,7 +28,8 @@
             <br>
             <button type="submit">Aceptar</button>
         </form>
-        <h3>Mensaje Dias vividos</h3>
+        <h3 id="titulo-mensaje"></h3>
+        <p id="mensaje"></p>
     </div>
 
     <script>
@@ -49,7 +50,9 @@
             const diasVividos = edad * 365;
 
             alert(`Hola ${nombre} de ${ciudad}, has vivido ${diasVividos} dias desde que naciste, espero que disfrutes de tu estadia en la web.`);
-            mensaje.innerHTML = `Hola ${nombre} de ${ciudad}, has vivido ${diasVividos} dias desde que naciste, espero que disfrutes de tu estadia en la web.`;
+            
+            document.getElementById("titulo-mensaje").innerHTML = "Mensaje días vividos";
+            mensaje.innerHTML = `Hola ${nombre} de ${ciudad}, has vivido ${diasVividos} días desde que naciste, espero que disfrutes de tu estadia en la web.`;
             
         });
 
